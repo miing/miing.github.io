@@ -1,0 +1,71 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <title>DevOps Workflow</title>
+
+  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<a name="top"/>
+
+<div id="header">
+  <div id="headerLeft">
+    <a href="/" tabindex="-1"><img src="/images/logo.png" alt="Miing" /></a>
+  </div>
+  <div id="headerRight">
+      <ul class="infrastructure">
+      <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+      <li id="projects-link"><a href="/projects/index.html"
+                        onClick="return loadLast('projects')"><span>Projects</span></a></li>
+      <li id="mobile-link"><a href="/mobile/index.html"
+                        onClick="return loadLast('mobile')"><span>Mobile</span></a></li>
+      <li id="infrastructure-link"><a href="/infrastructure/index.html"
+                        onClick="return loadLast('infrastructure')"><span>Infrastructure</span></a></li>
+      <li id="about-link"><a href="/about/index.html"
+                        onClick="return loadLast('about')"><span>About</span></a></li>
+    </ul>
+    </div>
+</div>
+<div id=sidebar>
+  <h1 id="overview"><a href="index.html">Overview</a></h1>
+<h1 id="architecture"><a href="architecture.html">Architecture</a></h1>
+<h1 id="devops-workflow"><a href="devops-workflow.html">DevOps Workflow</a></h1>
+<h1 id="getting-the-source"><a href="getting-the-source.html">Getting the Source</a></h1>
+<h1 id="deploying"><a href="deploying.html">Deploying</a></h1>
+<h1 id="contributing"><a href="contributing.html">Contributing</a></h1>
+<h1 id="community"><a href="community.html">Community</a></h1>
+</div>
+
+<div id=main>
+  <h1 id="devops-workflow">DevOps Workflow</h1>
+<p>The DevOps workflow, as shown below, aims to assist software teams in streaming work so that they have the ability to deliver software products effectively.</p>
+<p><img src="/images/mibox-devops-workflow.png" alt="mibox devops workflow diagram"></p>
+<h2 id="pm">PM</h2>
+<p>First of all, take into account a project that is to be registered in to project management system. In our case, it's considered employing <a href="https://www.chiliproject.org">Chiliproj</a> that manages all projects to kick off as per rules of project management, keeps track of all kinds of features/issues/bugs, and sharing documents produced during activities in project management.</p>
+<h2 id="sso">SSO</h2>
+<p>And then, assign a unique account for members in the project to have the right to access all of services. In our case, <a href="https://github.com/miing/infra-migo">Migo</a> is used to manage identities of all members in the project.</p>
+<h2 id="scmr">SCMR</h2>
+<p>Store the whole code of the project and review all changes to it. In our case, <a href="http://code.google.com/p/gerrit">Gerrit</a> is used to make these tasks done. If they sounds good, then the changes will be merged in to the code base of the project.</p>
+<h2 id="ci">CI</h2>
+<p>At last, completely build the code base via <a href="http://jenkins-ci.org">Jenkins</a>. If passed, release it wherever possible. If failed, whereas, report errors to PM (i.e. Chiliproj).</p>
+<h2 id="cms">CMS</h2>
+<p>Additionally, share knowledge relating to the project between members in the project via <a href="http://www.mediawiki.org">Mediawiki</a>.</p>
+<hr />
+<h1 id="author">Author</h1>
+<p>Samuel Mi <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#109;&#117;&#101;&#108;&#46;&#109;&#105;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#97;&#109;&#117;&#101;&#108;&#46;&#109;&#105;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> from Miing.org</p>
+</div>
+
+<div id="footer">
+  <div id="copyright">
+  </div>
+
+  <div id="footerLeft">
+    <p>Copyright &copy; 2014-2013 <a href="http://www.miing.org">Miing.org</a> &ndash; All rights reserved.</p>
+  </div>
+
+  <div id="footerRight">
+    <p>
+      <a href="#top">Go to Top</a>
+    </p>
+  </div>
+</div>

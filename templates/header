@@ -1,0 +1,20 @@
+<a name="top"/>
+
+<div id="header">
+  <div id="headerLeft">
+    <a href="/" tabindex="-1"><img src="/images/logo.png" alt="Miing" /></a>
+  </div>
+  <div id="headerRight">
+      <ul class="$category">
+      <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+      <li id="projects-link"><a href="/projects/index.html"
+                        onClick="return loadLast('projects')"><span>Projects</span></a></li>
+      <li id="mobile-link"><a href="/mobile/index.html"
+                        onClick="return loadLast('mobile')"><span>Mobile</span></a></li>
+      <li id="infrastructure-link"><a href="/infrastructure/index.html"
+                        onClick="return loadLast('infrastructure')"><span>Infrastructure</span></a></li>
+      <li id="about-link"><a href="/about/index.html"
+                        onClick="return loadLast('about')"><span>About</span></a></li>
+    </ul>
+    </div>
+</div>

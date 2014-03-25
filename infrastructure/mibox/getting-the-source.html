@@ -1,0 +1,81 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <title>Getting the Source</title>
+
+  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<a name="top"/>
+
+<div id="header">
+  <div id="headerLeft">
+    <a href="/" tabindex="-1"><img src="/images/logo.png" alt="Miing" /></a>
+  </div>
+  <div id="headerRight">
+      <ul class="infrastructure">
+      <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+      <li id="projects-link"><a href="/projects/index.html"
+                        onClick="return loadLast('projects')"><span>Projects</span></a></li>
+      <li id="mobile-link"><a href="/mobile/index.html"
+                        onClick="return loadLast('mobile')"><span>Mobile</span></a></li>
+      <li id="infrastructure-link"><a href="/infrastructure/index.html"
+                        onClick="return loadLast('infrastructure')"><span>Infrastructure</span></a></li>
+      <li id="about-link"><a href="/about/index.html"
+                        onClick="return loadLast('about')"><span>About</span></a></li>
+    </ul>
+    </div>
+</div>
+<div id=sidebar>
+  <h1 id="overview"><a href="index.html">Overview</a></h1>
+<h1 id="architecture"><a href="architecture.html">Architecture</a></h1>
+<h1 id="devops-workflow"><a href="devops-workflow.html">DevOps Workflow</a></h1>
+<h1 id="getting-the-source"><a href="getting-the-source.html">Getting the Source</a></h1>
+<h1 id="deploying"><a href="deploying.html">Deploying</a></h1>
+<h1 id="contributing"><a href="contributing.html">Contributing</a></h1>
+<h1 id="community"><a href="community.html">Community</a></h1>
+</div>
+
+<div id=main>
+  <h1 id="getting-the-source">Getting the Source</h1>
+<p>Note that <a href="index.html">MiBox</a> has been verified and tested on Ubuntu 10.04 (LTS) server with 32-bit. But, please check yourself out in the system different from the distribution just mentioned if errors or warnings are shown when running this solution on it. Or, look at <a href="community.html">Community</a> to try to seek for help.</p>
+<hr />
+<h2 id="downloading-the-source">Downloading the Source</h2>
+<p>Before getting the MiBox code base, the first thing you need to do is install <a href="http://code.google.com/p/git-repo/">Repo</a> tool, just because it's very convenient to manipulate and manage multiple git repositories. Additionally, another thing you also care is create a <code>bin/</code> directory beneath your home directory if not existing yet, then put this path on <code>PATH</code>.</p>
+<pre><code>mkdir /path/to/bin
+PATH=/path/to/bin:$PATH
+or
+echo "export PATH=/path/to/bin:\$PATH" &gt;&gt; ~/.bashrc
+source ~/.bashrc
+
+curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo &gt; /path/to/bin/repo
+chmod a+x /path/to/bin/repo
+</code></pre>
+<p>Notice that go directly into <a href="http://code.google.com/p/git-repo/downloads/list">here</a> to get Repo if the link above doesn't work.</p>
+<p>Then, create a working directory, named <code>mci</code>, under your home directory. And, get into it.</p>
+<pre><code>mkdir mci
+cd mci
+</code></pre>
+<p>Finally, just issue the following instructions to pull down the whole source from Github.</p>
+<pre><code>repo init -u https://github.com/miing/mci_manifest
+repo sync
+</code></pre>
+<hr />
+<h1 id="author">Author</h1>
+<p>Samuel Mi <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#109;&#117;&#101;&#108;&#46;&#109;&#105;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#97;&#109;&#117;&#101;&#108;&#46;&#109;&#105;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> from Miing.org</p>
+</div>
+
+<div id="footer">
+  <div id="copyright">
+  </div>
+
+  <div id="footerLeft">
+    <p>Copyright &copy; 2014-2013 <a href="http://www.miing.org">Miing.org</a> &ndash; All rights reserved.</p>
+  </div>
+
+  <div id="footerRight">
+    <p>
+      <a href="#top">Go to Top</a>
+    </p>
+  </div>
+</div>

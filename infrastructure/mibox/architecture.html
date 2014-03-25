@@ -1,0 +1,97 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <title>Architecture</title>
+
+  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<a name="top"/>
+
+<div id="header">
+  <div id="headerLeft">
+    <a href="/" tabindex="-1"><img src="/images/logo.png" alt="Miing" /></a>
+  </div>
+  <div id="headerRight">
+      <ul class="infrastructure">
+      <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+      <li id="projects-link"><a href="/projects/index.html"
+                        onClick="return loadLast('projects')"><span>Projects</span></a></li>
+      <li id="mobile-link"><a href="/mobile/index.html"
+                        onClick="return loadLast('mobile')"><span>Mobile</span></a></li>
+      <li id="infrastructure-link"><a href="/infrastructure/index.html"
+                        onClick="return loadLast('infrastructure')"><span>Infrastructure</span></a></li>
+      <li id="about-link"><a href="/about/index.html"
+                        onClick="return loadLast('about')"><span>About</span></a></li>
+    </ul>
+    </div>
+</div>
+<div id=sidebar>
+  <h1 id="overview"><a href="index.html">Overview</a></h1>
+<h1 id="architecture"><a href="architecture.html">Architecture</a></h1>
+<h1 id="devops-workflow"><a href="devops-workflow.html">DevOps Workflow</a></h1>
+<h1 id="getting-the-source"><a href="getting-the-source.html">Getting the Source</a></h1>
+<h1 id="deploying"><a href="deploying.html">Deploying</a></h1>
+<h1 id="contributing"><a href="contributing.html">Contributing</a></h1>
+<h1 id="community"><a href="community.html">Community</a></h1>
+</div>
+
+<div id=main>
+  <h1 id="architecture">Architecture</h1>
+<p>The MiBox stack, as shown in the following diagram, consists of a set of layers, each layer grouping together serveral functions. And the layers in the MiBox stack are described from top to bottom in detail, as well as the functions they are responsible for.</p>
+<p><img src="/images/mibox.png" alt="mibox architecture diagram" width="85%" height="100%"/></p>
+<h2 id="ui">UI</h2>
+<p>UI at the topmost layer of the MiBox stack provides two types of input for different level of users to configure what services to setup, including the scripted and the file-based.</p>
+<ul>
+<li><strong>Scripted</strong> for average users picking out a combination of services to setup following step-by-step tips when running MiBox.</li>
+<li><strong>File-based</strong> for advanced users, who have a knowledge of MiBox, configuring services directly by means of local setting file.</li>
+</ul>
+<h2 id="services">Services</h2>
+<p>Services layer is composed of two sublayers, upper services and underlying services. The former covers a set of services which setup open source tools according to those settings from UI layer, while the latter is also set up as per those settings specified by the former.</p>
+<p>The upper services layer includes Migo, Chiliproject, Gerrit, Jenkins, and so on. The underly services layer contains Apache, MySQL, OpenSSH, and the like.</p>
+<h2 id="sal">SAL</h2>
+<p>SAL (Services Abstract Layer) defines a set of service abstractions to distinguish between services.</p>
+<ul>
+<li><strong>SSO (Single Sign On)</strong> containing <a href="https://github.com/miing/infra-migo">Migo</a></li>
+<li><strong>PM (Project Managemnt)</strong> including <a href="https://www.chiliproject.org">Chiliproj</a></li>
+<li><strong>SCMR (Source Code Management and Review)</strong> covering <a href="http://code.google.com/p/gerrit">Gerrit</a> and <a href="https://github.com/sitaramc/gitolite">Gitolite</a></li>
+<li><strong>CI (Continuous Integration)</strong> containing <a href="http://jenkins-ci.org">Jenkins</a></li>
+<li><strong>CMS (Content Management System)</strong> including <a href="http://www.mediawiki.org">Mediawiki</a></li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<p>Configuration layer provides a set of default settings for all services in each service abstraction.</p>
+<p>In addition, setting up a local configuration file for chosen services is to overwrite corresponding default settings.</p>
+<h2 id="core">Core</h2>
+<p>Core Layer is the heart of the MiBox stack, which stems from the fact that it provides the following functions:</p>
+<ul>
+<li><strong>Initializing MiBox itself</strong></li>
+<li><strong>Launching UI</strong></li>
+<li><strong>Configuring services</strong></li>
+<li><strong>Setting up services chosen</strong></li>
+</ul>
+<h2 id="libraries">Libraries</h2>
+<p>Libraries layer provides a set of cross-platform libraries for the upper layers to solve incompatibility between platforms (i.e. distributions) when running MiBox, including:</p>
+<ul>
+<li><strong>Platform</strong> retrieving information between plattforms (e.g. architecture, distro)</li>
+<li><strong>Packages</strong> installing dependencies for services chosen</li>
+<li><strong>Paths</strong> acquiring directory structure of binaries as well as config files</li>
+</ul>
+<hr />
+<h1 id="author">Author</h1>
+<p>Samuel Mi <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#109;&#117;&#101;&#108;&#46;&#109;&#105;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#97;&#109;&#117;&#101;&#108;&#46;&#109;&#105;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> from Miing.org</p>
+</div>
+
+<div id="footer">
+  <div id="copyright">
+  </div>
+
+  <div id="footerLeft">
+    <p>Copyright &copy; 2014-2013 <a href="http://www.miing.org">Miing.org</a> &ndash; All rights reserved.</p>
+  </div>
+
+  <div id="footerRight">
+    <p>
+      <a href="#top">Go to Top</a>
+    </p>
+  </div>
+</div>

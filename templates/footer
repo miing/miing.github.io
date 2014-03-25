@@ -1,0 +1,14 @@
+<div id="footer">
+  <div id="copyright">
+  </div>
+
+  <div id="footerLeft">
+    <p>Copyright &copy; 2014-2013 <a href="http://www.miing.org">Miing.org</a> &ndash; All rights reserved.</p>
+  </div>
+
+  <div id="footerRight">
+    <p>
+      <a href="#top">Go to Top</a>
+    </p>
+  </div>
+</div>
